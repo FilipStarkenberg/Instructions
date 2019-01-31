@@ -1,0 +1,46 @@
+#Add to TOP of ~/vimrc: 
+
+if has('vim_starting')
+  set nocompatible               " Be iMproved
+endif
+
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'Valloric/YouCompleteMe'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+set shell=/bin/bash
+
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+
+
+
+
+
+Then do the following command: 
+vim +PluginInstall +qall
+
+Then do: 
+cd ~/.vim/bundle/YouCompleteMe
+python3 install.py --clang-completer
+
+Then create this file:
+~/.vim/.ycm_extra_conf.py
+
+And add the following to it (Not my config):
+https://raw.githubusercontent.com/rasendubi/dotfiles/master/.vim/.ycm_extra_conf.py
+
+That's it! Try creating a .c file and start typing. Auto-complete will show up after 2 characters by default. 
+
+You can test if it is working by doing :YcmDebugInfo inside vim. If text is displayed, somthing is working at least ;)

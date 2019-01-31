@@ -26,8 +26,6 @@ let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
 
 
-
-
 Then do the following command: 
 vim +PluginInstall +qall
 
@@ -38,7 +36,7 @@ python3 install.py --clang-completer
 Then create this file:
 ~/.vim/.ycm_extra_conf.py
 
-And add the following to it (Not my config):
+Open this and copy the content. Then paste it in the file you just created (I take no credit for this config): 
 https://raw.githubusercontent.com/rasendubi/dotfiles/master/.vim/.ycm_extra_conf.py
 
 That's it! Try creating a .c file and start typing. Auto-complete will show up after 2 characters by default. 
